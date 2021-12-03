@@ -51,11 +51,22 @@ module FIR_pipeline
         end
     end
 
+    logic               [17:0]  s_l_logic;
+
     adder_select_17_bit adder_select_17_bit_inst1(
         .a              (sum1_reg),
         .b              (sum2_reg),
-        .s              (s[16:0]),
-        .cout           (s[17])
+        .s              (s_l_logic[16:0]),
+        .cout           (s_l_logic[17])
     );
+
+    always_ff @(posedge clk) begin
+        if (reset) begin
+            s           <= 0;
+        end 
+        else begin
+            s           <= s_l_logic;
+        end 
+    end
 
 endmodule
