@@ -2,8 +2,8 @@ module FIR_pipeline
 (
     input  logic                clk,
     input  logic                reset,
-    input  logic        [15:0]  a_in,
-    output logic        [17:0]  s_out
+    input  logic        [15:0]  a,
+    output logic        [17:0]  s
 );
 
     logic               [15:0]  a1_logic, a2_logic, a3_logic, a4_logic   = 16'b0;
@@ -16,7 +16,7 @@ module FIR_pipeline
             a4_logic            <=  0;
         end
         else begin
-            a1_logic            <=  a_in;
+            a1_logic            <=  a;
             a2_logic            <=  a1_logic;
             a3_logic            <=  a2_logic;
             a4_logic            <=  a3_logic;
@@ -51,17 +51,28 @@ module FIR_pipeline
             s_out2_p_out_logic  <=  0;
         end
         else begin
-            s_out1_p_out_logic    <=  s_out1_p_in_logic;
-            s_out2_p_out_logic    <=  s_out2_p_in_logic;
+            s_out1_p_out_logic  <=  s_out1_p_in_logic;
+            s_out2_p_out_logic  <=  s_out2_p_in_logic;
         end
     end
+
+    logic               [17:0]  s_l_logic;
 
     adder_select_17_bit adder_select_17_bit_inst1(
         .clk            (clk),
         .reset          (reset),
         .a_in           (s_out1_p_out_logic),
         .b_in           (s_out2_p_out_logic),
-        .s_out          (s_out)
+        .s_out          (s_l_logic)
     );
+
+    always_ff @(posedge clk) begin
+        if (reset) begin
+            s                   <= 0;
+        end
+        else begin
+            s                   <= s_l_logic;
+        end          
+    end
 
 endmodule

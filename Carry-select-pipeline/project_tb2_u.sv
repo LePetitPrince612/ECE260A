@@ -21,8 +21,8 @@ module project_tb2_u;
   (
       .clk(clk),
       .reset(reset),
-      .a_in(a),
-      .s_out(s)
+      .a(a),
+      .s(s)
   );
 
   always begin			           	  // tick ... tock 
