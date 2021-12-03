@@ -1,5 +1,6 @@
 module adder_4_bit
-(   input  logic        [3:0]   a,
+(   
+    input  logic        [3:0]   a,
     input  logic        [3:0]   b,
     input  logic                cin,
     output logic                cout,
