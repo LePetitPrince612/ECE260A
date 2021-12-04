@@ -1,0 +1,87 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : FIR_pipeline
+Version: K-2015.06-SP2
+Date   : Thu Dec  2 20:44:59 2021
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65gpluswc (File: /home/linux/ieng6/ee260afa21/public/lab3_setup/libraries/db/tcbn65gpluswc.db)
+
+
+Operating Conditions: WCCOM   Library: tcbn65gpluswc
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+FIR_pipeline           ZeroWireload      tcbn65gpluswc
+adder_select_16_bit_2  ZeroWireload      tcbn65gpluswc
+adder_select_17_bit    ZeroWireload      tcbn65gpluswc
+adder_4_bit_20         ZeroWireload      tcbn65gpluswc
+adder_select_4_bit_8   ZeroWireload      tcbn65gpluswc
+adder_4_bit_17         ZeroWireload      tcbn65gpluswc
+adder_select_16_bit_0  ZeroWireload      tcbn65gpluswc
+adder_select_16_bit_1  ZeroWireload      tcbn65gpluswc
+adder_select_4_bit_0   ZeroWireload      tcbn65gpluswc
+adder_select_4_bit_1   ZeroWireload      tcbn65gpluswc
+adder_select_4_bit_2   ZeroWireload      tcbn65gpluswc
+adder_select_4_bit_3   ZeroWireload      tcbn65gpluswc
+adder_select_4_bit_4   ZeroWireload      tcbn65gpluswc
+adder_select_4_bit_5   ZeroWireload      tcbn65gpluswc
+adder_select_4_bit_6   ZeroWireload      tcbn65gpluswc
+adder_select_4_bit_7   ZeroWireload      tcbn65gpluswc
+adder_4_bit_0          ZeroWireload      tcbn65gpluswc
+adder_4_bit_2          ZeroWireload      tcbn65gpluswc
+adder_4_bit_4          ZeroWireload      tcbn65gpluswc
+adder_4_bit_7          ZeroWireload      tcbn65gpluswc
+adder_4_bit_9          ZeroWireload      tcbn65gpluswc
+adder_4_bit_11         ZeroWireload      tcbn65gpluswc
+adder_4_bit_13         ZeroWireload      tcbn65gpluswc
+adder_4_bit_15         ZeroWireload      tcbn65gpluswc
+adder_4_bit_1          ZeroWireload      tcbn65gpluswc
+adder_4_bit_3          ZeroWireload      tcbn65gpluswc
+adder_4_bit_5          ZeroWireload      tcbn65gpluswc
+adder_4_bit_6          ZeroWireload      tcbn65gpluswc
+adder_4_bit_8          ZeroWireload      tcbn65gpluswc
+adder_4_bit_10         ZeroWireload      tcbn65gpluswc
+adder_4_bit_12         ZeroWireload      tcbn65gpluswc
+adder_4_bit_14         ZeroWireload      tcbn65gpluswc
+adder_4_bit_16         ZeroWireload      tcbn65gpluswc
+adder_4_bit_18         ZeroWireload      tcbn65gpluswc
+adder_4_bit_19         ZeroWireload      tcbn65gpluswc
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   4.9991 mW   (96%)
+  Net Switching Power  = 217.2234 uW    (4%)
+                         ---------
+Total Dynamic Power    =   5.2163 mW  (100%)
+
+Cell Leakage Power     =  30.0823 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           4.8573            0.1124        1.9698e+04            4.9894  (  95.10%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.1418            0.1048        1.0385e+04            0.2570  (   4.90%)
+--------------------------------------------------------------------------------------------------
+Total              4.9991 mW         0.2172 mW     3.0082e+04 nW         5.2464 mW
+1
