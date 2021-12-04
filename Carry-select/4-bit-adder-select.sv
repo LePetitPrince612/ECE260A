@@ -27,6 +27,6 @@ module adder_select_4_bit
     );
 
     assign cout = sel? sum2 : sum1;
-    assgin s    = sel? cout2 : cout1;
+    assign s    = sel? cout2 : cout1;
 
 endmodule
