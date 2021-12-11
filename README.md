@@ -2,10 +2,10 @@
 > Feiyu Yang
 > PID: A59009686
 
-# Structure
-## Carry-select
+## Structure
+### Carry-select
 Carry Select Adder project with one pipeline. Compile results are included.
-## Carry-select-pipeline
+### Carry-select-pipeline
 Heavily pipelined carry select adder. Compile results are included.
-## *.rpt
+### *.rpt
 Reference design report.
